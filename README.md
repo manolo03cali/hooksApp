@@ -67,3 +67,12 @@ export default tseslint.config([
   },
 ]);
 ```
+
+# Contenido abordado en este ejercicio
+
+TailwindCSS y estilos
+useState- Estado que re-dibuja
+Tipado estricto
+useEffect- Disparar efectos secundarios
+Conectar varios custom hooks
+useRef-Valor que no dispara re-render
