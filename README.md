@@ -76,3 +76,5 @@ Tipado estricto
 useEffect- Disparar efectos secundarios
 Conectar varios custom hooks
 useRef-Valor que no dispara re-render
+shadcnUI:
+npm install zod
