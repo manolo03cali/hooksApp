@@ -71,10 +71,18 @@ export default tseslint.config([
 # Contenido abordado en este ejercicio
 
 TailwindCSS y estilos
+Uso de v0 by vercel o lovable para generar plantilla grafica
 useState- Estado que re-dibuja
 Tipado estricto
 useEffect- Disparar efectos secundarios
 Conectar varios custom hooks
 useRef-Valor que no dispara re-render
-shadcnUI:
+shadcnUI: componentes predisenados altamente personalizables
 npm install zod
+
+Patron reducer
+useReducer hook
+Validadores de esquemas-zod
+Efectos sobre estados
+LocalStorage y SessionStorage
+Condiciones de los reducers
