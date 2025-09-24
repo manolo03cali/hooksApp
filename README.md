@@ -70,6 +70,21 @@ export default tseslint.config([
 
 # Contenido abordado en este ejercicio
 
+Dos formas de usar typeScript interface:
+interface Props {
+title: string;
+}
+export const MyTitle = ({ title }: Props) => {
+console.log("MyTitle re-render");
+return <h1>{title}</h1>;
+};
+interface Props {
+subTitle: string;
+}
+
+export const MySubTitle: React.FC<Props> = ({ subTitle }) => {
+return <h6>{subTitle}</h6>;
+};
 TailwindCSS y estilos
 Uso de v0 by vercel o lovable para generar plantilla grafica
 useState- Estado que re-dibuja
@@ -86,3 +101,23 @@ Validadores de esquemas-zod
 Efectos sobre estados
 LocalStorage y SessionStorage
 Condiciones de los reducers
+
+Memorización
+
+Hooks de memorización como:
+
+useMemo
+
+useCallback
+
+useOptimistic para hacer actualizaciones en pantalla rápidas
+
+useTransaction para evitar bloqueos de UI
+
+Simular fallos en posteos optimistas para hacer reversiones
+
+Nueva api Use
+
+Componente Suspense
+Para enviar notificaciones en pantalla
+npx shadcn@latest add sonner
