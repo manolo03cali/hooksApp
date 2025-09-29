@@ -1,10 +1,10 @@
 // Importamos StrictMode (modo estricto de React) y Suspense (componente para manejar cargas asíncronas).
-import { StrictMode, Suspense } from "react";
+import { StrictMode } from "react";
 // Importamos createRoot, que se usa para renderizar la aplicación en el DOM en React 18+
 import { createRoot } from "react-dom/client";
 
 //import necesario para utilizar sonner y emitir notificaciones en pantalla
-//import { Toaster } from "sonner";
+import { Toaster } from "sonner";
 
 // Importamos los estilos globales de la aplicación.
 import "./index.css";
@@ -24,34 +24,29 @@ import "./index.css";
 //import { InstagromApp } from "./07-useOptimistic/InstagromApp";
 
 // Importamos el componente principal que se va a renderizar ahora mismo.
-import { ClientInformation } from "./08-use-suspense/ClientInformation";
+//import { ClientInformation } from "./08-use-suspense/ClientInformation";
 // Importamos la función que simula la carga de un usuario (con delay incluido).
-import { getUserAction } from "./08-use-suspense/api/get-user.action";
+//import { getUserAction } from "./08-use-suspense/api/get-user.action";
+import { ProfessionalApp } from "./09-useContext/ProfessionalApp";
 
 // Creamos el punto de entrada de la aplicación, vinculándola con el elemento HTML que tiene id="root"
 createRoot(document.getElementById("root")!).render(
   // StrictMode activa comprobaciones y advertencias adicionales durante el desarrollo
   <StrictMode>
-    {/* <Toaster /> -> Renderizaría las notificaciones en pantalla si se habilita */}
+    <Toaster />
+    {/* 
+  <Suspense fallback={
+    <div className="bg-gradient flex flex-col gap-4">
+      <div className="relative flex items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
+        <p className=" absolute text-lg font-semibold">Cargando...</p>
+      </div>
+    </div>
+  }>
+    <ClientInformation getUser={getUserAction(1020)} />
+  </Suspense>
+  */}
 
-    {/* Suspense es un componente especial de React que nos permite mostrar un "fallback"
-        (pantalla de carga, spinner, mensaje, etc.) mientras se resuelven datos asíncronos */}
-    <Suspense
-      fallback={
-        // Fallback: mientras el componente carga, mostramos un spinner con texto "Cargando..."
-        <div className="bg-gradient flex flex-col gap-4">
-          <div className="relative flex items-center justify-center">
-            {/* Spinner animado */}
-            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
-            {/* Texto centrado sobre el spinner */}
-            <p className=" absolute text-lg font-semibold">Cargando...</p>
-          </div>
-        </div>
-      }
-    >
-      {/* Aquí se renderiza el componente ClientInformation, 
-          pasándole como prop la promesa devuelta por getUserAction con id=1020 */}
-      <ClientInformation getUser={getUserAction(1020)} />
-    </Suspense>
+    <ProfessionalApp />
   </StrictMode>
 );

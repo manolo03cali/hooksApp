@@ -121,3 +121,26 @@ Nueva api Use
 Componente Suspense
 Para enviar notificaciones en pantalla
 npx shadcn@latest add sonner
+
+---
+
+09-useContext y API - use
+
+Hook useContext
+
+Nueva API - use
+
+Persistencia de sesiones de usuario
+
+Rutas de la aplicación
+
+Rutas privadas y públicas
+
+Diseño condicional
+
+Y más
+
+Es una sección indispensable para comprender cómo React resuelve el problema de "Prop Drilling" o pasar los props de componente a componente hasta llegar al que necesita la información
+
+Usamos react router v 7 modo Data
+npm i react-router
